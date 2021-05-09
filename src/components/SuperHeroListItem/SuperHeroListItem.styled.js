@@ -2,12 +2,12 @@ import styled from "styled-components";
 
 export const StyledSuperHeroListItem = styled.div`
   display: block;
-  border: 1px solid gray;
+  border: 1px solid ${({ theme }) => theme.border};
   border-radius: 10px;
   width: 200px;
   overflow: hidden;
   margin: 0 15px 15px 0;
-  background-color: lightgray;
+  background-color: ${({ theme }) => theme.heroCard};
 
   break-inside: avoid;
   page-break-inside: avoid;

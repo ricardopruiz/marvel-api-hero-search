@@ -21,7 +21,7 @@ export const StyledSearchBar = styled.div`
 
   input {
     flex-grow: 1;
-    border: 1px lightgray solid;
+    border: 1px ${({ theme }) => theme.border} solid;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     font-size: 1.3rem;
@@ -33,20 +33,20 @@ export const StyledSearchBar = styled.div`
   }
 
   button {
-    border: 1px solid lightgray;
+    border: 1px solid ${({ theme }) => theme.border};
     border-left: none;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     font-size: 1.3rem;
     width: 80px;
-    background-color: #42cae1;
-    color: white;
+    background-color: ${({ theme }) => theme.primaryColor};
+    color: ${({ theme }) => theme.color};
 
     transition: all 0.3s linear;
 
     &:disabled {
-      background-color: lightgray;
-      color: darkgray;
+      background-color: ${({ theme }) => theme.disabled};
+      color: ${({ theme }) => theme.color};
 
       transition: all 0.3s linear;
     }

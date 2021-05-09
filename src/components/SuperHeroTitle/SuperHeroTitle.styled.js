@@ -1,18 +1,24 @@
 import styled from "styled-components";
 
-export const AppTitle = styled.h1`
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
-font-family: 'Montserrat', sans-serif;
+export const AppTitle = styled.div`
+  @font-face {
+    font-family: title-hero;
+    src: local("My Title"),
+      url('assets/fonts/comicsTricks.ttf');
+  }
 
-font-weight: bolder;
-font-size: 4rem;
-margin-bottom: 15px;
-margin-top: 0;
+  font-family: title-hero;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 4rem;
+  margin-bottom: 15px;
+  margin-top: 0;
 `;
 
 export const AppBackgroundTitle = styled.div`
-background-image: url(${process.env.PUBLIC_URL}/assets/img/font-back.jpg);
-background-clip: text;
--webkit-background-clip: text;
-color: transparent;
+  background-image: url(${({ theme }) => theme.bgTitleFont});
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  filter: brightness(0.75);
 `;

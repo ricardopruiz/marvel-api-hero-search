@@ -3,10 +3,10 @@ import PropTypes from "prop-types";
 
 import { AppBackgroundTitle, AppTitle } from "./SuperHeroTitle.styled";
 
-const SuperHeroTitle = ({ title }) => {
+const SuperHeroTitle = ({ children }) => {
   return (
     <AppBackgroundTitle>
-      <AppTitle>{title}</AppTitle>
+      <AppTitle>{children}</AppTitle>
     </AppBackgroundTitle>
   );
 };
