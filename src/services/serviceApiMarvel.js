@@ -1,5 +1,6 @@
-import { PUBLIC_KEY } from "../apiConfig.js";
 const BASE_URL_API = "https://gateway.marvel.com/v1/public/";
+
+const PUBLIC_KEY = process.env.REACT_APP_PUBLIC_KEY;
 
 const getUrlApiSearch = (query) =>
   `${BASE_URL_API}characters?nameStartsWith=${query}&apikey=${PUBLIC_KEY}`;
