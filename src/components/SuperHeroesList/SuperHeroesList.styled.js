@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const StyledSuperHeroesList = styled.div`
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
+  justify-content: center;
+
+  column-count: ${Math.floor(window.innerWidth / 202)};
 `;
