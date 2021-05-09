@@ -7,6 +7,7 @@ font-family: 'Montserrat', sans-serif;
 font-weight: bolder;
 font-size: 4rem;
 margin-bottom: 15px;
+margin-top: 0;
 `;
 
 export const AppBackgroundTitle = styled.div`

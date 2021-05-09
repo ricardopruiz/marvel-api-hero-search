@@ -4,11 +4,11 @@ import { SuperHeroListItem } from "../SuperHeroListItem";
 
 import PropTypes from "prop-types";
 
-export const SuperHeroesList = ({ heroList }) => {
+export const SuperHeroesList = ({ heroList, numberOfColumns }) => {
   return (
-    <StyledSuperHeroesList>
-      {heroList.map((hero, index) => (
-        <SuperHeroListItem key={`${Date.now()}-${index}`} hero={hero} />
+    <StyledSuperHeroesList numberOfColumns={numberOfColumns}>
+      {heroList.map((hero) => (
+        <SuperHeroListItem key={hero.id} hero={hero} />
       ))}
     </StyledSuperHeroesList>
   );

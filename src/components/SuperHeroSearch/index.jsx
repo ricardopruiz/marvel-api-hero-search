@@ -11,10 +11,21 @@ export const SuperHeroSearch = ({
   onSearch,
   loading,
 }) => {
+  const pressedButton = ({ key }) => {
+    if (key === "Enter") {
+      onSearch();
+    }
+  };
+
   return (
     <StyledSearchBar>
-      <input type="text" value={heroSearched} onInput={onInput} />
-      <button disabled={heroSearched.length === 0} onClick={onSearch}>
+      <input
+        type="text"
+        value={heroSearched}
+        onInput={onInput}
+        onKeyPress={pressedButton}
+      />
+      <button disabled={!heroSearched.length} onClick={onSearch}>
         {loading ? (
           <StyledSpiner>
             <FontAwesomeIcon icon={faSpinner} />

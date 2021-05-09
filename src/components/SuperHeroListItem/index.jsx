@@ -8,9 +8,10 @@ import {
   StyledHeroDesc,
 } from "./SuperHeroListItem.styled";
 
+const IMG_SIZE = "portrait_incredible";
+
 export const SuperHeroListItem = ({ hero }) => {
-  const imgSize = "portrait_incredible";
-  const imgURL = `${hero.thumbnail.path}/${imgSize}.${hero.thumbnail.extension}`;
+  const imgURL = `${hero.thumbnail.path}/${IMG_SIZE}.${hero.thumbnail.extension}`;
 
   return (
     <StyledSuperHeroListItem>

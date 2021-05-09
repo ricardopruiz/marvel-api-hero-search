@@ -7,18 +7,18 @@ export const StyledSuperHeroListItem = styled.div`
   width: 200px;
   overflow: hidden;
   margin: 0 15px 15px 0;
-  box-shadow: 10px 10px 64px -38px rgba(0, 0, 0, 0.75);
-  background-color: white;
+  background-color: lightgray;
 
   break-inside: avoid;
   page-break-inside: avoid;
+  filter: sepia(70%);
+  transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
 
   &:hover {
-    box-shadow: 10px 10px 64px -38px rgba(0, 0, 0, 20);
-    transform: scale(1.1);
-    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
-
-    z-index: 999 !important;
+    filter: none;
+    background-color: white;
+    transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+    
   }
 `;
 

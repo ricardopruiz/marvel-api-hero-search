@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 import { AppBackgroundTitle, AppTitle } from "./SuperHeroTitle.styled";
 
-export const SuperHeroTitle = ({ title }) => {
+const SuperHeroTitle = ({ title }) => {
   return (
     <AppBackgroundTitle>
       <AppTitle>{title}</AppTitle>
@@ -18,3 +18,5 @@ SuperHeroTitle.propTypes = {
 SuperHeroTitle.defaultProps = {
   title: "",
 };
+
+export default SuperHeroTitle;

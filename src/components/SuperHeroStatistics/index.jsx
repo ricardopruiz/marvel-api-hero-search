@@ -1,11 +1,24 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-export const SuperHeroStatistics = ({ numberOfResults }) => {
+import { StyledStatistics } from "./SuperHeroStatistics.styled";
+
+export const SuperHeroStatistics = ({ showStatictics, numberOfResults }) => {
   const isPlural = numberOfResults !== 1;
-  return <div>{`${numberOfResults} result${isPlural ? "s" : ""} found`}</div>;
+  return (
+    <StyledStatistics>
+      {showStatictics &&
+        `${numberOfResults} result${isPlural ? "s" : ""} found`}
+    </StyledStatistics>
+  );
 };
 
 SuperHeroStatistics.propTypes = {
   numberOfResults: PropTypes.number.isRequired,
+  showStatictics: PropTypes.bool.isRequired,
+};
+
+SuperHeroStatistics.defaultProps = {
+  numberOfResults: 0,
+  showStatictics: false,
 };
